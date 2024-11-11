@@ -1,0 +1,61 @@
+@import "variables";
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: $nav-height;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    max-width: 480px;
+
+    > ul {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+
+        > li {
+            flex: 1;
+            height: 100%;
+
+            a {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+                color: $nav-color-default;
+
+                svg {
+                    width: 1.8rem;
+                    margin: 0.5rem auto;
+                    text-align: center;
+
+                    path {
+                        fill: $nav-color-default;
+                    }
+                }
+
+                &.active {
+                    color: $nav-color-active;
+
+                    svg {
+                        path {
+                            fill: $nav-color-active;
+                        }
+                    }
+                }
+            }
+
+            &.profile {
+                a {
+                    svg {
+                        width: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

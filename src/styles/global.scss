@@ -1,0 +1,178 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import "reset";
+@import "variables";
+
+/* global */
+html,
+body {
+    height: 100%;
+}
+#root {
+    max-width: 480px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* main */
+main {
+    padding: $layout-padding;
+    height: calc(100vh - $nav-height);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* form */
+form {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    input {
+        width: 100%;
+        border: 1px solid #e5e1da;
+        padding: 1rem;
+        font-size: 1.6rem;
+        box-sizing: border-box;
+        border-radius: $border-radius;
+    }
+}
+form {
+    flex: 2;
+
+    .form-group {
+        label {
+            font-weight: 500;
+
+            &.required::after {
+                content: " *";
+                color: $color-main;
+                font-size: 1.2rem;
+            }
+        }
+        input {
+            margin-top: 0.5rem;
+
+            &::placeholder {
+                font-size: 1.4rem;
+                color: #999;
+            }
+        }
+        span {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+            display: block;
+            color: $color-warning;
+
+            &::before {
+                content: "* ";
+            }
+        }
+    }
+}
+
+/* button */
+button {
+    font-family: "Pretendard";
+    background: inherit;
+    font-size: 1.6rem;
+    padding: 0;
+    padding-inline: 0;
+    margin: 0;
+    border: none;
+}
+.btn {
+    width: 100%;
+    border-radius: $border-radius;
+    padding: 1rem;
+    background-color: $color-main;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    &:disabled {
+        opacity: 0.3;
+    }
+}
+.none {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* title */
+h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+/* popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    word-break: keep-all;
+    z-index: 1;
+
+    .popup-layout {
+        width: 100%;
+        padding: 2rem 2rem 3rem;
+        line-height: 1.5;
+        border-radius: $border-radius;
+        background: #fff;
+
+        .popup-close {
+            display: flex;
+            justify-content: end;
+        }
+
+        .popup-icon {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .popup-body {
+            margin-top: 1rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .popup-button {
+            margin-top: 3rem;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.clientNav {
+    svg {
+        width: 2rem;
+    }
+}
+
+/* loading */
+.loading {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}

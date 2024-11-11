@@ -1,0 +1,92 @@
+@import "variables";
+
+.wrapper {
+    height: 100%;
+
+    > .modify {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: $color-main;
+        position: fixed;
+        bottom: 8rem;
+        right: 2.5rem;
+
+        svg {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+
+    > .noData {
+        height: 100%;
+        text-align: center;
+        display: grid;
+        place-items: center;
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    > .list {
+        > div {
+            display: flex;
+            justify-content: end;
+            padding: 0 1rem 1rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            li {
+                border-radius: $border-radius;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid #ddd;
+
+                > div {
+                    padding: 1rem;
+
+                    button.name {
+                        font-weight: 500;
+                        svg {
+                            width: 1.6rem;
+                            margin-right: 0.5rem;
+                            transform: translateY(0.2rem);
+                        }
+                    }
+
+                    button.delete {
+                        font-size: 1.2rem;
+                        margin-left: 2rem;
+                        color: #888;
+                        text-decoration: underline;
+
+                        svg {
+                            width: 1.8rem;
+                        }
+                    }
+                }
+
+                a {
+                    padding: 1rem;
+                    min-width: 6rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                }
+
+                > span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

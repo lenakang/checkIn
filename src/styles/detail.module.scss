@@ -1,0 +1,27 @@
+.wrapper {
+    .user {
+        > ul {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li {
+                &.name {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    .checkIns {
+        .info {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import "variables";
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    > .account {
+        > div {
+            margin-bottom: 0.5rem;
+
+            &.name {
+                span {
+                    font-size: 2.4rem;
+                    font-weight: 800;
+                    margin-right: 0.5rem;
+                }
+            }
+
+            &.email {
+                button {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+    > .info,
+    > .setting {
+        > h3 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        > div {
+            border-radius: $border-radius;
+            background: #f2f2f2;
+            overflow: hidden;
+        }
+
+        &.info {
+            > div {
+                display: flex;
+                padding: $layout-padding;
+                justify-content: space-between;
+
+                > span {
+                    font-weight: 700;
+                    color: $color-main;
+                }
+            }
+        }
+
+        &.setting {
+            > div {
+                > button {
+                    width: 100%;
+                    display: block;
+                    padding: $layout-padding;
+                    border-bottom: 1px solid #fff;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

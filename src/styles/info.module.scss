@@ -1,0 +1,44 @@
+.info {
+    min-height: 100vh;
+    font-size: 1.4rem;
+
+    > nav {
+        position: relative;
+        border-bottom: 1px solid #333;
+        height: 5rem;
+        text-align: center;
+        line-height: 5rem;
+
+        a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 2rem;
+            height: 5rem;
+            width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 2rem;
+            }
+        }
+    }
+
+    > article {
+        padding: 1.5rem;
+
+        > div {
+            margin-bottom: 2rem;
+            h5 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            ul {
+                list-style-type: disc;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
